@@ -64,6 +64,12 @@ public:
    */
   void UpdateEKF(const Eigen::VectorXd &z);
 
+  /**
+     * Common part of Update and UpdateEKF methods
+     * @param y The measurement at k+1
+     */
+  void update(const Eigen::VectorXd &y);
+
 };
 
 #endif /* KALMAN_FILTER_H_ */
